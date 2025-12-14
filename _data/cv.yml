@@ -1,0 +1,125 @@
+# - title: General Information
+#   type: map
+#   contents:
+#     - name: Full Name
+#       value: Yongfan Liu
+#     - name: Contact
+#       value: yongfal [at] uci [dot] edu
+
+- title: Research Areas
+  type: list
+  contents:
+  - '<strong>Computer Vision</strong>: Depth Estimation, 3D reconstruction, Vision Language Modles (VLM)'
+  - '<strong>Digital Images Processing</strong>: RGB Images, Magnetic Resonance Images (MRI), Hyperspectrum Images (HSI)'
+  - '<strong>Edge AI</strong>: Light-weight Model Design, Model Optimization, Software-hardware Codesign'
+
+- title: Technical Skills
+  type: list
+  contents:
+  - '<strong>Programming Languages</strong>: Python, Java, C++, MATLAB, JavaScript'
+  - '<strong>Frameworks/Tools</strong>: PyTorch, TensorFlow, OpenCV, SNPE SDK'
+  - '<strong>Development Platforms</strong>: <a href="https://www.projectaria.com/">Aria AR Glasses</a>,
+    NVIDIA Orin Jetson Nano, Qualcomm Snapdragon, Qualcomm Automotive Platform (SA-8295)'
+
+- title: Education
+  type: edu
+  contents:
+    - title: University of California, Irvine - PhD in Computer Engineering
+      # institution: University of California, Irvine
+      year: 2020 - Present
+      location: Irvine, USA
+      icon: /assets/img/uci.png
+      description:
+        - 'Co-advised by <a href="https://engineering.uci.edu/users/glenn-healey" target="_blank"><b>Prof. Glenn Healey</b></a> 
+          and <a href="https://hyoukjunkwon.com/" target="_blank"><b>Prof. Hyoukjun Kwon</b></a>'
+        - 'Thesis: Extending Computer Vision for AR/VR Devices'
+        - 'Thesis committee: Glenn Healey, Hyoukjun Kwon, Salma Elmalaki'
+    
+    - title: RWTH Aachen
+      # institution: Southeast University
+      year: 2018
+      location: Achen, Germany
+      icon: /assets/img/rwth.jpg
+      description:
+        - Germany Smart Industrial 4.0 Winter Camps Study Project
+
+    - title: Southeast University - Bachelor (Hornor) of Computer Science and Technology
+      # institution: Southeast University
+      year: 2016 - 2020 
+      location: Nanjing, China
+      icon: /assets/img/seu.jpg
+      description:
+        - 'Advised by <a href="https://cs.seu.edu.cn/kongyouyong/main.htm" target="_blank"><b>Prof. Youyong Kong</b></a>'
+        - 'Graduated with an Honors Degree from Chien-Shiung Wu College, the university’s Honors College.'
+    
+
+- title: Research Experience
+  type: edu-no-icon
+  contents:
+  - title: 'Efficient Streaming 3D Reconstruction with XR devices '
+    year: Oct. 2024 - Present
+    location: ILLIXR (Illinois Extended Reality) Lab | UIUC, IL & UC Irvine, CA
+    description:
+      - 'Designed a graph-based memory bank mechanism for VGGT, enabling streaming input and achieving up to 6.3x 
+        faster inference while maintaining constant peak memory usage'
+      - 'Modeled frame-to-frame relationships using a graph structure, significantly improving ViT efficiency for AR/VR
+        and long-content scenarios; outperforms the SOTA baseline by 20.7%, 5.9%, and 5.3% in camera pose accuracy,
+        depth accuracy, and 3D reconstruction quality, respectively.'
+      - 'Submitted one paper under review at CVPR 2026.'
+
+  - title: 'Efficient Depth Estimation with Meta Glasses '
+    year: Mar. 2023 - Nov. 2025
+    location: Intelligent System Architecture Laboratory | UC Irvine, CA
+    description:
+      - 'Proposed hardware-friendly novel efficient model with MultiHead Cost Volume, decreased inference latency by 7%
+        and decreased error rate by 17% comparing with previous model'
+      - 'Proposed Rectification Positional Encoding (RPE) to enable fast online stereo rectification, reducing inference 
+        latency by 43% and lowering the overall pipeline error rate by 42%.'
+      - 'Implemented models with cross-compiling and quantization skills on Qualcomm Snapdragon devices, Nvidia Orin
+        Jetson, and next-generation AR glasses, Aria' 
+      - Published one paper to <strong>CVPR 2025</strong>
+
+  - title: 'Air quality prediction with hyperspectrum images by SmolVLM '
+    year: 'Nov. 2025 - Present'
+    location: Irvine Vision Laboratory | UC Irvine, CA
+    description:
+    - 'Integrated pressure, humidity, and hyperspectral imaging data to predict ground-level air quality using
+      Vision-Language Models (VLMs), improving multi-modal environmental sensing performance.'
+  
+  - title: 'Brain Tissue MRI Segmentation Based on LBP 3D'
+    year: 'Oct. 2018 - June 2020'
+    location: Laboratory of Image Science and Technology | Nanjing, Jiangsu
+    description:
+    - 'Designed novel algorithms for brain tissue semantic segmentation in magnetic resonance images; solved it with
+      Supervoxel, LBP 3D algorithm and KNN algorithm'
+    - Gained one national patent and published one paper to IJML.
+
+
+- title: Work Experience
+  type: edu
+  contents:
+    - title: Internship - Digital Cockpit Department 
+      institution: NIO - Electric vehicle manufacturer | San Jose, CA
+      year: Summer 2024
+      icon: /assets/img/nio.png
+      icon_link: "https://www.nio.com/"
+      description:
+        - <strong>Acceleration and deployment of large language models on heterogeneous in-vehicle devices </strong>
+        - Optimized language model inference with speculative sampling, achieving a 2.5x speedup.
+        - Deployed large language models on NVIDIA Orin Jetson Nano and Qualcomm SA-8295P platforms.
+        - Collaborated with other team members on generative models, including diffusion-based image synthesis.
+        - Check more details in the <a href="../projects/intern_nio.html" target="_blank"><b>project page</b></a>
+
+
+- title: Honors and Awards
+  type: table
+  contents:
+    - year: June 2020
+      items: Honor Bachelor Degree of Southeast University
+    - year: Sept. 2019
+      items: National Encouragement Scholarship (Top 5%)
+    - year: Jan. 2018
+      items: Honorable Mention in Mathematical Contest in Modeling of the U.S. (Top 15%)
+    - year: Sept. 2017
+      items: National Encouragement Scholarship (Top 5%)
+

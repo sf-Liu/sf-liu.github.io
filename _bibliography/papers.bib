@@ -1,115 +1,68 @@
 ---
 ---
 
-@string{aps = {American Physical Society,}}
-
-@book{einstein1920relativity,
-  title={Relativity: the Special and General Theory},
-  author={Einstein, Albert},
-  year={1920},
-  publisher={Methuen & Co Ltd},
-  html={relativity.html}
+@eprint{mbvggt,
+  author    = {Liu<nobr><em>*</em></nobr>, Yongfan and Tian<nobr><em>*</em></nobr>, Boyuan and  Singh, Rahul and Adve, Sarita and Kwon, Hyoukjun},
+  title     = {MBVGGT: Adapting VGGT for Long Video Sequences via Graph Memory Bank},
+  booktitle = {Under Review of CVPR 2026},
+  year      = {2025},
+  abbr      = {arXiv},
+  selected  = {true},
+  icon      = {/assets/img/pub/topk_avg.png},
+  abstract  = {Recent advances in large-scale pretrained visual transformers have achieved remarkable success in delivering high-quality 3D reconstruction results. However, for a stream of inputs (e.g., video), they require heavy global recomputation for each new frame, which also involves quadratic memory costs to the sequence length in attention modules. To address the challenge, techniques such as caching previous keys and values have been explored. However, such approaches still incur quadratic memory costs, which hinder their deployment with long sequence inputs on memory-constrained commodity hardware. To address the challenge, we first make an observation that not all input frames are critical for processing new inputs by a quantitative analysis and utilize that observation to develop a new compute- and memory-efficient vision transformer for 3D reconstruction, MBVGGT. It employs a memory bank that maintains information of important frames only, which significantly reduces memory requirements yet enables high-quality results. Our evaluations demonstrate that MBVGGT achieves comparable accuracy across depth estimation, pose estimation, and 3D reconstruction on long content, while running 6.3x faster than the SOTA model and getting rid of the OOM error.},
 }
 
-@book{einstein1956investigations,
-  bibtex_show={true},
-  title={Investigations on the Theory of the Brownian Movement},
-  author={Einstein, Albert},
-  year={1956},
-  publisher={Courier Corporation},
-  preview={brownian-motion.gif}
+@patent{CN110728685B,
+  title        = {Brain Tissue Segmentation Method Based on Diagonal Voxel Local Binary Pattern Texture Operator},
+  author       = {Yongfan Liu and Sen Du and Youyong Kong and Huazhong Shu},
+  year         = {2023},
+  abbr         = {Patent},
+  number       = {CN110728685B},
+  country      = {CN},
+  kind         = {B},
+  filing_date  = {2019-09-20},
+  publication_date = {2023-04-07},
+  assignee     = {Southeast University},
+  html         = {https://patents.google.com/patent/CN110728685B/en?oq=CN110728685B},
+  icon         = {/assets/img/pub/lbp1.png},
+  abstract     = {A brain tissue segmentation method based on diagonal voxel local binary pattern texture operator, which performs supervoxel clustering segmentation, extracts diagonal voxel LBP texture features, and uses kNN for feature matching to improve 3D MRI data segmentation efficiency.}
 }
 
-@article{einstein1950meaning,
-  abbr={AJP},
-  bibtex_show={true},
-  title={The meaning of relativity},
-  author={Einstein, Albert and Taub, AH},
-  journal={American Journal of Physics},
-  volume={18},
-  number={6},
-  pages={403--404},
-  year={1950},
-  publisher={American Association of Physics Teachers}
+
+
+@inproceedings{liu2025efficient,
+  author    = {Liu, Yongfan and Kwon, Hyoukjun},
+  title     = {Efficient Depth Estimation for Unstable Stereo Camera Systems on AR Glasses},
+  booktitle = {Proceedings of the Computer Vision and Pattern Recognition Conference},
+  month     = {June},
+  year      = {2025},
+  pages     = {6252--6261},
+  abbr      = {CVPR},
+  selected  = {true},
+  pdf       = {2411.10013v2.pdf},
+  html      = {https://cvpr.thecvf.com/virtual/2025/poster/33885},
+  code      = {https://github.com/UCI-ISA-Lab/MultiHeadDepth-HomoDepth},
+  icon      = {/assets/img/pub/pos_enc.png},
+  abstract  = {Stereo depth estimation is a fundamental component in augmented reality (AR), which requires low latency for real-time processing. However, preprocessing such as rectification and non-ML computations such as cost volume require significant amount of latency exceeding that of an ML model itself, which hinders the real-time processing required by AR. Therefore, we develop alternative approaches to the rectification and cost volume that consider ML acceleration (GPU and NPUs) in recent hardware. For pre-processing, we eliminate it by introducing homography matrix prediction network with a rectification positional encoding (RPE), which delivers both low latency and robustness to unrectified images. For cost volume, we replace it with a group-pointwise convolution-based operator and approximation of cosine similarity based on layernorm and dot product. Based on our approaches, we develop MultiHeadDepth (replacing cost volume) and HomoDepth (MultiHeadDepth + removing pre-processing) models. MultiHeadDepth provides 11.8-30.3% improvements in accuracy and 22.9-25.2% reduction in latency compared to a state-of-the-art depth estimation model for AR glasses from industry. HomoDepth, which can directly process unrectified images, reduces the end-to-end latency by 44.5%. We also introduce a multi-task learning method to handle misaligned stereo inputs on HomoDepth, which reduces the AbsRel error by 10.0-24.3%. The overall results demonstrate the efficacy of our approaches, which not only reduce the inference latency but also improve the model performance.},
 }
 
-@article{PhysRev.47.777,
-  abbr={PhysRev},
-  title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author={Einstein*†, A. and Podolsky*, B. and Rosen*, N.},
-  abstract={In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal={Phys. Rev.},
-  location={New Jersey},
-  volume={47},
-  issue={10},
-  pages={777--780},
-  numpages={0},
-  year={1935},
-  month={May},
-  publisher=aps,
-  doi={10.1103/PhysRev.47.777},
-  url={http://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf={example_pdf.pdf},
-  altmetric={248277},
-  dimensions={true},
-  google_scholar_id={qyhmnyLat1gC},
-  video={https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ},
-  additional_info={. *More Information* can be [found here](https://github.com/alshedivat/al-folio/)},
-  annotation={* Example use of superscripts<br>† Albert Einstein},
-  selected={true},
-  inspirehep_id = {3255}
+
+
+@article{liu2020supervoxel,
+  author    = {Yongfan Liu and Sen Du and Youyong Kong},
+  title     = {Supervoxel Clustering with a Novel 3D Descriptor for Brain Tissue Segmentation},
+  journal   = {International Journal of Machine Learning and Computing},
+  volume    = {10},
+  number    = {3},
+  pages     = {501--506},
+  year      = {2020},
+  month     = {May},
+  abbr      = {IJML},
+  pdf       = {964-AM0045.pdf},
+  html      = {https://www.ijml.org/index.php?m=content&c=index&a=show&catid=107&id=1135},
+  code      = {https://github.com/sf-Liu/LBP_3D-Operator-Descriptor},
+  icon      = {/assets/img/pub/lbp.png},
+  abstract  = {Accurate segmentation of brain tissues from magnetic resonance imaging (MRI) is of significant importance for clinical application and scientific research. Traditional strategies to handle the 2D images have the limitation of 3D data. In this paper, to overcome these issues, a tissue segmentation approach with supervoxel clustering and the novel 3D texture extraction method are proposed. At first, the simple linear iterative clustering in three-dimension is applied, to reduce the number of calculation objects. Then, a novel local binary pattern in three-dimension is proposed for better discriminate the supervoxels with different tissues. A clustering approach is also developed to classify supervoxels with features into different types of tissues. The labels of supervoxel are finally mapped back to original data to have the tissue type of voxels. The performance of the proposed method is evaluated on the commonly utilized Internet Brain Segmentation Repository 18 dataset. The experiment showed promising results with insufficient trainset.}
 }
 
-@article{einstein1905molekularkinetischen,
-  title={{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author={Einstein, A.},
-  journal={Annalen der physik},
-  volume={322},
-  number={8},
-  pages={549--560},
-  year={1905},
-  publisher={Wiley Online Library}
-}
 
-@article{einstein1905movement,
-  abbr={Ann. Phys.},
-  title={Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author={Einstein, A.},
-  journal={Ann. Phys.},
-  volume={17},
-  pages={549--560},
-  year={1905}
-}
-
-@article{einstein1905electrodynamics,
-  title={On the electrodynamics of moving bodies},
-  author={Einstein, A.},
-  year={1905}
-}
-
-@Article{einstein1905photoelectriceffect,
-  bibtex_show={true},
-  abbr={Ann. Phys.},
-  title="{{\"U}ber einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt}",
-  author={Albert Einstein},
-  abstract={This is the abstract text.},
-  journal={Ann. Phys.},
-  volume={322},
-  number={6},
-  pages={132--148},
-  year={1905},
-  doi={10.1002/andp.19053220607},
-  award={Albert Einstein receveid the **Nobel Prize in Physics** 1921 *for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect*},
-  award_name={Nobel Prize}
-}
-
-@book{przibram1967letters,
-  bibtex_show={true},
-  title={Letters on wave mechanics},
-  author={Einstein, Albert and Schrödinger, Erwin and Planck, Max and Lorentz, Hendrik Antoon and Przibram, Karl},
-  year={1967},
-  publisher={Vision},
-  preview={wave-mechanics.gif},
-  abbr={Vision}
-}
