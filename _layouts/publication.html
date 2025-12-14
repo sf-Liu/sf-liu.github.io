@@ -1,0 +1,172 @@
+---
+---
+<style>
+.pub-icon {
+  max-width: 105px;  /* 图片初始大小 */
+  height: auto;
+  transition: transform 0.3s ease; /* 动画平滑过渡 */
+  cursor: pointer; /* 鼠标变手型 */
+}
+
+.pub-icon:hover {
+  transform: scale(2.5) ; /* 放大  倍 */
+  z-index: 10; /* 保证浮在上层 */
+  transform-origin: bottom right;  /* 放大时锚点在左上角 */
+  position: relative;
+}
+</style>
+
+
+
+<div class="row m-0 mt-3 p-0">
+  <div class="col-sm-1 p-0 abbr d-flex flex-column
+              {% if entry.icon %}
+                align-items-center
+              {% else %}
+                align-items-center justify-content-center
+              {% endif %}">
+
+    {% if entry.icon %}
+      <div class="mb-1 text-center">
+        <img
+          src="{{ entry.icon | relative_url }}"
+          alt="{{ entry.abbr }} icon"
+          class="pub-icon"
+        >
+      </div>
+    {% endif %}
+
+    {% if entry.abbr %}
+      {% if site.data.venues[entry.abbr] %}
+        <a
+          class="badge font-weight-bold purple darken-1 text-center"
+          style="width: 65px;"
+          href="{{ site.data.venues[entry.abbr].url }}"
+          target="_blank"
+        >
+          {{ entry.abbr }}
+        </a>
+      {% else %}
+        <span
+          class="badge font-weight-bold light-green darken-1 text-center"
+          style="width: 65px;"
+        >
+          {{ entry.abbr }}
+        </span>
+      {% endif %}
+    {% endif %}
+
+  </div>
+
+
+  <div class="col-sm-11 mt-2 mt-sm-0 p-0 pl-sm-5 pr-sm-2">
+    {% assign entry_id = entry.key | replace: ':', '-' %}
+    <div id="{{entry_id}}" class="col p-0">
+      <h5 class="title mb-0">{{entry.title}}</h5>
+      <div class="author">
+        {% for author in entry.author_array %}
+          {% assign name = author.first | append: ' ' | append: author.last %}
+          {% if forloop.length == 1 %}
+            {% if author.last contains site.scholar.last_name %}
+              <nobr><em>{{author.first}} {{author.last}}</em>.</nobr>
+            {% else %}
+              {% if site.data.coauthors[name] %}
+                <nobr><a href="{{site.data.coauthors[name].url}}" target="_blank">{{author.first}} {{author.last}}</a>.</nobr>
+              {% else %}
+                <nobr>{{author.first}} {{author.last}},</nobr>
+              {% endif %}
+            {% endif %}
+          {% else %}
+            {% unless forloop.last %}
+              {% if author.last contains site.scholar.last_name %}
+                <nobr><strong>{{author.first}} {{author.last}}</strong>,</nobr>
+              {% else %}
+                {% if site.data.coauthors[name] %}
+                  <nobr><a href="{{site.data.coauthors[name].url}}" target="_blank">{{author.first}} {{author.last}}</a>,</nobr>
+                {% else %}
+                  <nobr>{{author.first}} {{author.last}},</nobr>
+                {% endif %}
+              {% endif %}
+            {% else %}
+              and
+              {% if author.last == site.scholar.last_name %}
+                <nobr><strong>{{author.first}} {{author.last}}</strong>.</nobr>
+              {% else %}
+                {% if site.data.coauthors[name] %}
+                  <nobr><a href="{{site.data.coauthors[name].url}}" target="_blank">{{author.first}} {{author.last}}</a>.</nobr>
+                {% else %}
+                  <nobr>{{author.first}} {{author.last}}</nobr>
+                {% endif %}
+              {% endif %}
+            {% endunless %}
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      <div>
+        <p class="periodical font-italic">
+          {% if entry.type == "article" %}
+            In {{entry.journal}}
+          {% elsif entry.type == "inproceedings" %}
+            In {{entry.booktitle}}
+            {% if entry.year %}
+              {{entry.year}}.
+            {% endif %}
+          {% elsif entry.type == "thesis" %}
+            In {{entry.booktitle}}
+          {% elsif entry.type == "eprint" %}
+            In {{entry.booktitle}}
+          {% endif %}
+          
+          
+        </p>
+      </div>
+    
+      <div class="col p-0">
+        {% if entry.abstract %}
+          <a class="badge orange waves-effect font-weight-light mr-1" data-toggle="collapse" href="#{{entry_id}}-abstract" role="button" aria-expanded="false" aria-controls="{{entry_id}}-abstract">Abstract</a>
+        {% endif %}
+        {% if entry.html %}
+          <a class="badge orange waves-effect font-weight-light mr-1" href="{{ entry.html }}" target="_blank">HTML</a>
+        {% endif %}
+        {% if entry.pdf %}
+          <a class="badge orange waves-effect font-weight-light mr-1" href="{{ entry.pdf | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">PDF</a>
+        {% endif %}
+        {% if entry.supplement %}
+          <a class="badge orange waves-effect font-weight-light mr-1" href="{{ entry.supplement | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">Supplementary</a>
+        {% endif %}
+        {% if entry.addendum %}
+          <a class="badge orange waves-effect font-weight-light mr-1" href="{{ entry.addendum | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">Addendum</a>
+        {% endif %}
+        {% if entry.poster %}
+          <a class="badge orange waves-effect font-weight-light mr-1" href="{{ entry.poster | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">Poster</a>
+        {% endif %}
+        {% if entry.slides %}
+          <a class="badge orange waves-effect font-weight-light mr-1" href="{{ entry.slides | prepend: '/assets/pdf/' | prepend: site.baseurl | prepend: site.url }}" target="_blank">Slides</a>
+        {% endif %}
+        {% if entry.code %}
+          <a class="badge orange waves-effect font-weight-light mr-1" href="{{ entry.code }}" target="_blank">Code</a>
+        {% endif %}
+        {% if entry.arxiv %}
+          <a class="badge orange waves-effect font-weight-light mr-1" href="http://arxiv.org/abs/{{ entry.arxiv }}" target="_blank">arXiv</a>
+        {% endif %}
+        {% if entry.website %}
+          <a class="badge orange waves-effect font-weight-light mr-1" href="{{ entry.website }}" target="_blank">Website</a>
+        {% endif %}
+        {% if entry.video %}
+          <a class="badge orange waves-effect font-weight-light mr-1" href="{{ entry.video }}" target="_blank">Video</a>
+        {% endif %}
+      </div>
+    
+      {% if entry.abstract %}
+      <div class="col mt-2 p-0">
+        <div id="{{entry_id}}-abstract" class="collapse">
+          <div class="abstract card card-body font-weight-light mr-0 mr-sm-3 p-3">
+            {{ entry.abstract }}
+          </div>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
