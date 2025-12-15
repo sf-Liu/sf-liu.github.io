@@ -10,7 +10,8 @@ nav_order: 2
 <div id="projects" class="row mt-2 pt-3" style="overflow: visible !important;">
   {% assign sorted_projects = site.projects | sort: "importance" | reverse %}
   {% for project in sorted_projects %}
-    <div class="project-card" style="width:250px; flex:0 0 auto;">
+    <div class="project-card" style="width:240px; flex:0 0 auto;
+    margin-right: 24px; margin-bottom: 24px;">
       {% if project.redirect %}
         <a href="{{ project.redirect }}" target="_blank">
       {% else %}
