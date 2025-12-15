@@ -9,7 +9,7 @@ nav_order: 0
 
 <!-- Place PDF download link at the top right. -->
 <div class="row" style="margin-top: -3.5em;">
-	<a class="ml-auto mr-2" href="/assets/pdf/resume.pdf" target="_blank">
+	<a class="ml-auto mr-2" href="/assets/pdf/Resume.pdf" target="_blank">
 	  <img height="60px" src="/assets/img/pdf_icon.svg">
 	</a>
 </div>
@@ -265,3 +265,4 @@ nav_order: 0
 		</div>
 	{% endfor %}
 </div>
+
