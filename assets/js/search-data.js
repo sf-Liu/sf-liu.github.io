@@ -93,7 +93,7 @@ ninja.data = [{
         title: 'CV',
         section: 'Socials',
         handler: () => {
-          window.open("/assets/pdf/resume.pdf", "_blank");
+          window.open("/assets/pdf/Resume.pdf", "_blank");
         },
       },{
       id: 'light-theme',
