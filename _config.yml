@@ -8,8 +8,7 @@ middle_name:
 last_name: Liu
 contact_note: >
   <p><span style="font-weight: 700;"> The best way to reach me is through my email and LinkedIn DM </span></p>
-description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+description: CVPR 2025 | PhD Cand. @ UCI Engineering | EX-Research Intern @ NIO
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
 keywords: # add your own keywords or leave empty
@@ -25,7 +24,6 @@ back_to_top: true # set to false to disable the back to top button
 # -----------------------------------------------------------------------------
 # Theme
 # -----------------------------------------------------------------------------
-# rebuild trigger
 
 # repo color theme
 repo_theme_light: default # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
@@ -636,4 +634,3 @@ jsonresume:
   - languages
   - interests
   - references
-
