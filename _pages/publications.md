@@ -6,7 +6,7 @@ nav: publications
 description: <nobr>*</nobr> denotes equal contribution or joint lead authorship.
 nav: true
 nav_order: 1
-years: [2025, 2023, 2020]
+years: [2026, 2025, 2023, 2020]
 ---
 
 {% include bib_search.liquid %}
