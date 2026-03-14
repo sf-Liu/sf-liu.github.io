@@ -38,7 +38,7 @@ My research aims to extend advanced computer vision capabilities to AR/VR and XR
 
 My recent work focuses on 3D reconstruction for XR scenarios, particularly addressing out-of-memory challenges in long-context video processing through a graph-based memory bank design. In parallel, I am working on air quality estimation using hyperspectral imagery, leveraging vision–language models (VLM) for multi-modal environmental sensing.
 
-Previously, I interned at **[NIO](https://www.nio.com/)** (an electric vehicle manufacturer) in San Jose, where I worked on speculative decoding for large language models and deployed them on automotive-grade computing platforms
+Previously, I interned at **[NIO](https://www.nio.com/)** (an electric vehicle manufacturer) in San Jose, where I worked on speculative decoding for large language models and deployed them on automotive-grade computing platforms. This summer, I will join [Samsung Research America](https://sra.samsung.com/) as an intern, where I will work on research and development for the next generation of AR and intelligent devices.
 
-***I am currently seeking internship opportunities for Spring and Summer 2026.***
+***I am currently seeking a full-time new-grad position at the beginning of 2027***
 
