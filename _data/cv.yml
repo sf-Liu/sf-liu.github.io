@@ -52,6 +52,37 @@
         - 'Advised by <a href="https://cs.seu.edu.cn/kongyouyong/main.htm" target="_blank"><b>Prof. Youyong Kong</b></a>'
         - 'Graduated with an Honors Degree from Chien-Shiung Wu College, the university’s Honors College.'
     
+- title: Work Experience
+  type: edu
+  contents:
+    - title: Internship - Mobile Platform Solution, XR Platform Team
+      institution: Samsung Research America | Mountain View, CA
+      year: Summer 2026
+      icon: /assets/img/samsung.png
+      icon_scale: 0.7
+      icon_link: "https://sra.samsung.com/"
+      description:
+        - <strong>Spatially-aware tiny VLM for egocentric AR-glasses golf videos via privileged training</strong>
+        - Built a 3D perception pipeline (detection, tracking, reconstruction) to recover golf ball and club-head trajectories
+          from egocentric AR-glasses video, and used them as privileged information for a teacher VLM.
+        - Designed a three-round data curation pipeline (LLM validation, manual impact check, teacher generation) with a
+          leakage gate, so the teacher's chain-of-thought supervision relies only on the images.
+        - Fine-tuned a lightweight Gemma 4 VLM with QLoRA and an impact-weighted loss, raising impact-detection F1 from
+          0% to 70% (97.2% precision, 91.4% ±1-frame accuracy) with image-only on-device inference.
+        - Check more details in the <a href="../projects/golf_vlm.html" target="_blank"><b>project page</b></a>
+
+    - title: Internship - Digital Cockpit Department
+      institution: NIO - Electric vehicle manufacturer | San Jose, CA
+      year: Summer 2024
+      icon: /assets/img/nio.png
+      icon_link: "https://www.nio.com/"
+      description:
+        - <strong>Acceleration and deployment of large language models on heterogeneous in-vehicle devices </strong>
+        - Optimized language model inference with speculative sampling, achieving a 2.5x speedup.
+        - Deployed large language models on NVIDIA Orin Jetson Nano and Qualcomm SA-8295P platforms.
+        - Collaborated with other team members on generative models, including diffusion-based image synthesis.
+        - Check more details in the <a href="../projects/intern_nio.html" target="_blank"><b>project page</b></a>
+
 
 - title: Research Experience
   type: edu-no-icon
@@ -60,12 +91,9 @@
     year: Oct. 2024 - Present
     location: ILLIXR (Illinois Extended Reality) Lab | UIUC, IL & UC Irvine, CA
     description:
-      - 'Designed a graph-based memory bank mechanism for VGGT, enabling streaming input and achieving up to 6.3x 
-        faster inference while maintaining constant peak memory usage'
-      - 'Modeled frame-to-frame relationships using a graph structure, significantly improving ViT efficiency for AR/VR
-        and long-content scenarios; outperforms the SOTA baseline by 20.7%, 5.9%, and 5.3% in camera pose accuracy,
-        depth accuracy, and 3D reconstruction quality, respectively.'
-      - 'Submitted one paper under review at CVPR 2026.'
+      - Proposed a reconstruction-aware, backbone-agnostic memory bank for VGGT-style 3D reconstruction  with scene-token similarity to keep informative frames and drop redundant ones.
+      - Matched full-sequence accuracy using only about 3% of frames, enabled 540-frame reconstruction on a single 24GB GPU (vs.over 60GB), and cut StreamVGGT latency and peak memory by 4$\times$.
+      - Submitted one paper under review at ICLR 2027.
 
   - title: 'Efficient Depth Estimation with Meta Glasses '
     year: Mar. 2023 - Nov. 2025
@@ -94,21 +122,6 @@
       Supervoxel, LBP 3D algorithm and KNN algorithm'
     - Gained one national patent and published one paper to IJML.
 
-
-- title: Work Experience
-  type: edu
-  contents:
-    - title: Internship - Digital Cockpit Department 
-      institution: NIO - Electric vehicle manufacturer | San Jose, CA
-      year: Summer 2024
-      icon: /assets/img/nio.png
-      icon_link: "https://www.nio.com/"
-      description:
-        - <strong>Acceleration and deployment of large language models on heterogeneous in-vehicle devices </strong>
-        - Optimized language model inference with speculative sampling, achieving a 2.5x speedup.
-        - Deployed large language models on NVIDIA Orin Jetson Nano and Qualcomm SA-8295P platforms.
-        - Collaborated with other team members on generative models, including diffusion-based image synthesis.
-        - Check more details in the <a href="../projects/intern_nio.html" target="_blank"><b>project page</b></a>
 
 
 - title: Honors and Awards

@@ -3,13 +3,15 @@
 
 @eprint{mbvggt,
   author    = {Liu<nobr><em>*</em></nobr>, Yongfan and Tian<nobr><em>*</em></nobr>, Boyuan and  Singh, Rahul and Adve, Sarita and Kwon, Hyoukjun},
-  title     = {MBVGGT: Adapting VGGT for Long Video Sequences via Graph Memory Bank},
-  booktitle = {Under Review of ECCV 2026},
+  title     = {Fast and stable long-context 3D reconstruction using Recon-Aware Memory Bank},
+  booktitle = {Under Review of ICLR 2027},
   year      = {2026},
   abbr      = {arXiv},
   selected  = {true},
   icon      = {/assets/img/pub/topk_avg.png},
-  abstract  = {Recent advances in large-scale pretrained visual transformers have achieved remarkable success in delivering high-quality 3D reconstruction results. However, for a stream of inputs (e.g., video), they require heavy global recomputation for each new frame, which also involves quadratic memory costs to the sequence length in attention modules. To address the challenge, techniques such as caching previous keys and values have been explored. However, such approaches still incur quadratic memory costs, which hinder their deployment with long sequence inputs on memory-constrained commodity hardware. To address the challenge, we first make an observation that not all input frames are critical for processing new inputs by a quantitative analysis and utilize that observation to develop a new compute- and memory-efficient vision transformer for 3D reconstruction, MBVGGT. It employs a memory bank that maintains information of important frames only, which significantly reduces memory requirements yet enables high-quality results. Our evaluations demonstrate that MBVGGT achieves comparable accuracy across depth estimation, pose estimation, and 3D reconstruction on long content, while running 6.3x faster than the SOTA model and getting rid of the OOM error.},
+  abstract  = {Feed-forward 3D reconstruction models such as VGGT provide high-quality geometry and camera estimation without per-scene optimization, but scaling them to long visual sequences remains challenging. Dense models incur quadratic attention computation as context grows, while streaming variants still accumulate increasingly large historical context. We argue that efficient context reduction should be both reconstruction-aware and architecture-decoupled: selected frames should preserve downstream reconstruction quality without relying on backbone-specific cache or attention structures. To this end, we introduce Reconstruction-Aware Memory Bank (RAMB), a plug-in framework that uses frame-associated scene tokens as a common representation across VGGT-style backbones. RAMB combines a lightweight Rank Model trained with downstream reconstruction outcomes to identify high-utility frames with scene-token similarity to retain complementary observations and remove redundant context. 
+  
+  We evaluate RAMB on VGGT-$\Omega$ and StreamVGGT across ScanNet, ETH3D, and KITTI-VO. The selected frames are highly informative: reconstructing from only about 3% of a 400-frame sequence, VGGT-$\Omega$ matches or exceeds full-sequence reconstruction accuracy (ACC). For chunked inference, RAMB carries informative context across chunks, enabling 540-frame reconstruction on a single 24 GB GPU, where full-sequence inference requires over 60 GB, with comparable quality. For StreamVGGT, RAMB bounds the historical context to 20.9 of 240 frames on average while maintaining comparable quality, and reduces forward latency and peak memory by 4x},
 }
 
 @patent{CN110728685B,
@@ -65,6 +67,5 @@
   icon      = {/assets/img/pub/lbp.png},
   abstract  = {Accurate segmentation of brain tissues from magnetic resonance imaging (MRI) is of significant importance for clinical application and scientific research. Traditional strategies to handle the 2D images have the limitation of 3D data. In this paper, to overcome these issues, a tissue segmentation approach with supervoxel clustering and the novel 3D texture extraction method are proposed. At first, the simple linear iterative clustering in three-dimension is applied, to reduce the number of calculation objects. Then, a novel local binary pattern in three-dimension is proposed for better discriminate the supervoxels with different tissues. A clustering approach is also developed to classify supervoxels with features into different types of tissues. The labels of supervoxel are finally mapped back to original data to have the tissue type of voxels. The performance of the proposed method is evaluated on the commonly utilized Internet Brain Segmentation Repository 18 dataset. The experiment showed promising results with insufficient trainset.}
 }
-
 
 

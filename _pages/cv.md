@@ -9,7 +9,7 @@ nav_order: 0
 
 <!-- Place PDF download link at the top right. -->
 <div class="row" style="margin-top: -3.5em;">
-	<a class="ml-auto mr-2" href="/assets/pdf/Resume.pdf" target="_blank">
+	<a class="ml-auto mr-2" href="/assets/pdf/resume.pdf" target="_blank">
 	  <img height="60px" src="/assets/img/pdf_icon.svg">
 	</a>
 </div>
@@ -58,12 +58,14 @@ nav_order: 0
               <!-- Left icon with optional link -->
               <div class="col-auto" style="display:flex; align-items:center; justify-content:flex-start; width:90px;">
                 {% if content.icon %}
+                  {% assign icon_scale = content.icon_scale | default: 1 %}
+                  {% assign icon_height = icon_scale | times: 80 %}
                   {% if content.icon_link %}
                     <a href="{{ content.icon_link }}" target="_blank">
-                      <img src="{{ content.icon }}" alt="{{ content.title }}" style="height:80px; width:auto;">
+                      <img src="{{ content.icon }}" alt="{{ content.title }}" style="height:{{ icon_height }}px; width:auto;">
                     </a>
                   {% else %}
-                    <img src="{{ content.icon }}" alt="{{ content.title }}" style="height:80px; width:auto;">
+                    <img src="{{ content.icon }}" alt="{{ content.title }}" style="height:{{ icon_height }}px; width:auto;">
                   {% endif %}
                 {% endif %}
               </div>
@@ -265,4 +267,3 @@ nav_order: 0
 		</div>
 	{% endfor %}
 </div>
-
