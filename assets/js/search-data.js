@@ -48,7 +48,12 @@ ninja.data = [{
             },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
           description: "",
-          section: "News",},{id: "projects-speculative-sampling-of-llm-and-deployment-on-auto-platform-chips",
+          section: "News",},{id: "projects-spatially-aware-tiny-vlm-for-egocentric-golf-videos",
+          title: 'Spatially-aware tiny VLM for egocentric golf videos',
+          description: "Teaching a compact on-device VLM to understand golf swings from AR-glasses video | 2026",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/golf_vlm.html";
+            },},{id: "projects-speculative-sampling-of-llm-and-deployment-on-auto-platform-chips",
           title: 'Speculative sampling of LLM and deployment on auto-platform chips',
           description: "Internship at NIO - Digital Cockpit Department | San Jose, CA, Summer 2024",
           section: "Projects",handler: () => {
@@ -93,7 +98,7 @@ ninja.data = [{
         title: 'CV',
         section: 'Socials',
         handler: () => {
-          window.open("/assets/pdf/Resume.pdf", "_blank");
+          window.open("/assets/pdf/resume.pdf", "_blank");
         },
       },{
       id: 'light-theme',
