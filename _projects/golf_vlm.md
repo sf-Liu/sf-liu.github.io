@@ -17,7 +17,7 @@ Golf videos recorded from AR glasses are hard for today's Vision-Language Models
 
 This project closes that gap. We give a large "teacher" VLM extra spatial knowledge during training, then pass its reasoning on to a tiny "student" VLM that only sees the raw video frames at run time.
 
-The fine-tuned model can:[intern_nio.md](intern_nio.md)
+The fine-tuned model can:
 
 - **Detect impact**: decide whether the ball is struck in a clip, and at which frame.
 - **Evaluate the shot**: comment on the quality of the swing and the strike.
