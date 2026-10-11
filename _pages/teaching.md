@@ -8,7 +8,7 @@ nav_order: 6
 ---
 
 ### Conference Reviewer
-NeurIPS 2026, IEEE EDM 2026
+NeurIPS 2026 (Top Reviewer), IEEE EDM 2026
 
 ### TA/Readers:
 **EECS 101** INTRO TO MACH VIS
